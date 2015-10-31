@@ -26,13 +26,32 @@ ApplicationWindow {
         width: 200
         height: 720
         color: "#ffffff"
-        visible: butVisMenu.checked ? true : false
+        //visible: butVisMenu.checked ? false : true
         anchors.left: parent.left
         anchors.leftMargin: 0
         anchors.bottom: parent.bottom
         anchors.bottomMargin: 0
         anchors.topMargin: 0
         anchors.top: parent.top
+        /*property bool stateVisible: true
+        opacity: 1
+        states: [
+                State { when: containerMenu.stateVisible;
+                        PropertyChanges {   target: containerMenu; opacity: 1.0; visible: true    }},
+                State { when: !containerMenu.stateVisible;
+                        PropertyChanges {   target: containerMenu; opacity: 0.0; visible: false    }}
+            ]
+        transitions: [ Transition { NumberAnimation { property: "opacity"; duration: 500}} ]*/
+
+        property bool stateVisible: true
+        states: [
+                State { when: containerMenu.stateVisible;
+                        PropertyChanges {   target: containerMenu; anchors.leftMargin: 0}},
+                State { when: !containerMenu.stateVisible;
+                        PropertyChanges {   target: containerMenu; anchors.leftMargin: -200 }}
+            ]
+        transitions: [ Transition { NumberAnimation { property: "anchors.leftMargin"; duration: 200}} ]
+
 
 
         ItemMenu {
@@ -158,12 +177,24 @@ ApplicationWindow {
 
     }
 
+    Button {
+        id: butVisMenu
+        anchors.verticalCenter: containerMenu.verticalCenter
+        anchors.horizontalCenter: checked ? parent.left : containerMenu.right
+        checkable: true
+        text: checked ? "  >" : "  <"
+        z: -1
+        onClicked: containerMenu.stateVisible ? containerMenu.stateVisible = false : containerMenu.stateVisible = true
+    }
 
 
 
     Label {
         text: qsTr("Hello World")
-        anchors.centerIn: parent
+        anchors.left: containerMenu.right
+        anchors.leftMargin: 300
+        anchors.top: parent.top
+        anchors.topMargin: 400
     }
 }
 
