@@ -5,7 +5,7 @@ ApplicationWindow {
     visible: true
     width: 1280
     height: 720
-    title: qsTr("Hello World")
+    title: qsTr("Slide Menu with Loader")
 
     menuBar: MenuBar {
         Menu {
@@ -26,29 +26,19 @@ ApplicationWindow {
         width: 200
         height: 720
         color: "#ffffff"
-        //visible: butVisMenu.checked ? false : true
         anchors.left: parent.left
         anchors.leftMargin: 0
         anchors.bottom: parent.bottom
         anchors.bottomMargin: 0
         anchors.topMargin: 0
         anchors.top: parent.top
-        /*property bool stateVisible: true
-        opacity: 1
-        states: [
-                State { when: containerMenu.stateVisible;
-                        PropertyChanges {   target: containerMenu; opacity: 1.0; visible: true    }},
-                State { when: !containerMenu.stateVisible;
-                        PropertyChanges {   target: containerMenu; opacity: 0.0; visible: false    }}
-            ]
-        transitions: [ Transition { NumberAnimation { property: "opacity"; duration: 500}} ]*/
 
         property bool stateVisible: true
         states: [
                 State { when: containerMenu.stateVisible;
                         PropertyChanges {   target: containerMenu; anchors.leftMargin: 0}},
                 State { when: !containerMenu.stateVisible;
-                        PropertyChanges {   target: containerMenu; anchors.leftMargin: -200 }}
+                        PropertyChanges {   target: containerMenu; anchors.leftMargin: -195 }}
             ]
         transitions: [ Transition { NumberAnimation { property: "anchors.leftMargin"; duration: 200}} ]
 
@@ -60,6 +50,11 @@ ApplicationWindow {
             anchors.top: parent.top
             anchors.left: parent.left
             itemName: "Taula Castellers"
+            MouseArea {
+                id: clickableAreaTaula
+                anchors.fill: parent
+                onClicked: pageLoader.source = "Taula.qml"
+            }
         }
 
         ItemMenu {
@@ -68,6 +63,11 @@ ApplicationWindow {
             anchors.top: itemMenuTaula.bottom
             anchors.left: parent.left
             itemName: "Pilar"
+            MouseArea {
+                id: clickableAreaPilar
+                anchors.fill: parent
+                onClicked: pageLoader.source = "Pilar.qml"
+            }
         }
 
         ItemMenu {
@@ -76,6 +76,11 @@ ApplicationWindow {
             anchors.left: parent.left
             anchors.top: itemMenuPilar.bottom
             itemName: "Torre"
+            MouseArea {
+                id: clickableAreaTorre
+                anchors.fill: parent
+                onClicked: pageLoader.source = "Torre.qml"
+            }
         }
 
         ItemMenu {
@@ -84,6 +89,11 @@ ApplicationWindow {
             anchors.left: parent.left
             anchors.right: parent.right
             itemName: "Tres"
+            MouseArea {
+                id: clickableAreaTres
+                anchors.fill: parent
+                onClicked: pageLoader.source = "Tres.qml"
+            }
         }
 
         ItemMenu {
@@ -92,6 +102,11 @@ ApplicationWindow {
             anchors.right: parent.right
             anchors.left: parent.left
             itemName: "Quatre"
+            MouseArea {
+                id: clickableAreaQuatre
+                anchors.fill: parent
+                onClicked: pageLoader.source = "Quatre.qml"
+            }
         }
 
         ItemMenu {
@@ -100,6 +115,11 @@ ApplicationWindow {
             anchors.top: itemMenuQuatre.bottom
             anchors.left: parent.left
             itemName: "Cinc"
+            MouseArea {
+                id: clickableAreaCinc
+                anchors.fill: parent
+                onClicked: pageLoader.source = "Cinc.qml"
+            }
         }
 
         ItemMenu {
@@ -108,6 +128,11 @@ ApplicationWindow {
             anchors.left: parent.left
             anchors.top: itemMenuCinc.bottom
             itemName: "Set"
+            MouseArea {
+                id: clickableAreaSet
+                anchors.fill: parent
+                onClicked: pageLoader.source = "Set.qml"
+            }
         }
 
         ItemMenu {
@@ -116,6 +141,11 @@ ApplicationWindow {
             anchors.left: parent.left
             anchors.right: parent.right
             itemName: "Soca Pilar"
+            MouseArea {
+                          id: clickableSPilar
+                          anchors.fill: parent
+                          onClicked: pageLoader.source = "SPilar.qml"
+                      }
         }
 
         ItemMenu {
@@ -124,6 +154,11 @@ ApplicationWindow {
             anchors.left: parent.left
             anchors.top: itemMenuSocaPilar.bottom
             itemName: "Folre Pilar"
+            MouseArea {
+                          id: clickableFPilar
+                          anchors.fill: parent
+                          onClicked: pageLoader.source = "FPilar.qml"
+                      }
         }
 
         ItemMenu {
@@ -132,6 +167,11 @@ ApplicationWindow {
             anchors.left: parent.left
             anchors.right: parent.right
             itemName: "Soca Torre"
+            MouseArea {
+                          id: clickableSTorre
+                          anchors.fill: parent
+                          onClicked: pageLoader.source = "STorre.qml"
+                      }
         }
 
         ItemMenu {
@@ -140,6 +180,11 @@ ApplicationWindow {
             anchors.left: parent.left
             anchors.top: itemMenuSocaTorre8.bottom
             itemName: "Folre Torre"
+            MouseArea {
+                          id: clickableFTorre
+                          anchors.fill: parent
+                          onClicked: pageLoader.source = "FTorre.qml"
+                      }
         }
 
         ItemMenu {
@@ -148,6 +193,11 @@ ApplicationWindow {
             anchors.left: parent.left
             anchors.right: parent.right
             itemName: "Soca Tres"
+            MouseArea {
+                          id: clickableSTres
+                          anchors.fill: parent
+                          onClicked: pageLoader.source = "Stres.qml"
+                      }
         }
 
         ItemMenu {
@@ -156,6 +206,11 @@ ApplicationWindow {
             anchors.left: parent.left
             anchors.top: itemMenuSocaTres.bottom
             itemName: "Folre Tres"
+            MouseArea {
+                          id: clickableFTres
+                          anchors.fill: parent
+                          onClicked: pageLoader.source = "FTres.qml"
+                      }
         }
 
         ItemMenu {
@@ -164,6 +219,11 @@ ApplicationWindow {
             anchors.left: parent.left
             anchors.right: parent.right
             itemName: "Soca Quatre"
+            MouseArea {
+                          id: clickableSQuatre
+                          anchors.fill: parent
+                          onClicked: pageLoader.source = "SQuatre.qml"
+                      }
         }
 
         ItemMenu {
@@ -173,6 +233,11 @@ ApplicationWindow {
             anchors.top: itemMenuSocaQuatre.bottom
             anchors.bottom: parent.bottom
             itemName: "Folre Quatre"
+            MouseArea {
+                          id: clickableFQuatre
+                          anchors.fill: parent
+                          onClicked: pageLoader.source = "FQuatre.qml"
+                      }
         }
 
     }
@@ -187,14 +252,25 @@ ApplicationWindow {
         onClicked: containerMenu.stateVisible ? containerMenu.stateVisible = false : containerMenu.stateVisible = true
     }
 
-
-
-    Label {
-        text: qsTr("Hello World")
+    Item {
+        z: -2
         anchors.left: containerMenu.right
-        anchors.leftMargin: 300
+        anchors.right: parent.right
         anchors.top: parent.top
-        anchors.topMargin: 400
+        anchors.bottom: parent.bottom
+
+        Loader {
+            id: pageLoader
+            source: "Taula.qml"
+            anchors.fill: parent
+        }
+
+        Connections {
+               target: pageLoader.item
+               onMessage: console.log(msg)
+           }
+
+
     }
 }
 

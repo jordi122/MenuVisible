@@ -2,5 +2,7 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>ItemMenu.qml</file>
+        <file>Taula.qml</file>
+        <file>Pilar.qml</file>
     </qresource>
 </RCC>

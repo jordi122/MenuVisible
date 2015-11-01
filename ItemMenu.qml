@@ -6,12 +6,10 @@ Rectangle {
     color: "red"
     border.color: "black"
     property alias itemName: name.text
-
     Text {
         id: name
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.verticalCenter: parent.verticalCenter
         text: qsTr("Item Menu")
     }
-
 }
