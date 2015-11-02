@@ -53,6 +53,8 @@ ApplicationWindow {
             MouseArea {
                 id: clickableAreaTaula
                 anchors.fill: parent
+                onPressed: parent.color = "#2b2e37"
+                onReleased: parent.color = "#383c4a"
                 onClicked: pageLoader.source = "Taula.qml"
             }
         }
@@ -66,6 +68,8 @@ ApplicationWindow {
             MouseArea {
                 id: clickableAreaPilar
                 anchors.fill: parent
+                onPressed: parent.color = "#2b2e37"
+                onReleased: parent.color = "#383c4a"
                 onClicked: pageLoader.source = "Pilar.qml"
             }
         }
@@ -79,6 +83,8 @@ ApplicationWindow {
             MouseArea {
                 id: clickableAreaTorre
                 anchors.fill: parent
+                onPressed: parent.color = "#2b2e37"
+                onReleased: parent.color = "#383c4a"
                 onClicked: pageLoader.source = "Torre.qml"
             }
         }
@@ -92,6 +98,8 @@ ApplicationWindow {
             MouseArea {
                 id: clickableAreaTres
                 anchors.fill: parent
+                onPressed: parent.color = "#2b2e37"
+                onReleased: parent.color = "#383c4a"
                 onClicked: pageLoader.source = "Tres.qml"
             }
         }
@@ -105,6 +113,8 @@ ApplicationWindow {
             MouseArea {
                 id: clickableAreaQuatre
                 anchors.fill: parent
+                onPressed: parent.color = "#2b2e37"
+                onReleased: parent.color = "#383c4a"
                 onClicked: pageLoader.source = "Quatre.qml"
             }
         }
@@ -118,6 +128,8 @@ ApplicationWindow {
             MouseArea {
                 id: clickableAreaCinc
                 anchors.fill: parent
+                onPressed: parent.color = "#2b2e37"
+                onReleased: parent.color = "#383c4a"
                 onClicked: pageLoader.source = "Cinc.qml"
             }
         }
@@ -131,6 +143,8 @@ ApplicationWindow {
             MouseArea {
                 id: clickableAreaSet
                 anchors.fill: parent
+                onPressed: parent.color = "#2b2e37"
+                onReleased: parent.color = "#383c4a"
                 onClicked: pageLoader.source = "Set.qml"
             }
         }
@@ -144,6 +158,8 @@ ApplicationWindow {
             MouseArea {
                           id: clickableSPilar
                           anchors.fill: parent
+                onPressed: parent.color = "#2b2e37"
+                onReleased: parent.color = "#383c4a"
                           onClicked: pageLoader.source = "SPilar.qml"
                       }
         }
@@ -157,6 +173,8 @@ ApplicationWindow {
             MouseArea {
                           id: clickableFPilar
                           anchors.fill: parent
+                onPressed: parent.color = "#2b2e37"
+                onReleased: parent.color = "#383c4a"
                           onClicked: pageLoader.source = "FPilar.qml"
                       }
         }
@@ -170,6 +188,9 @@ ApplicationWindow {
             MouseArea {
                           id: clickableSTorre
                           anchors.fill: parent
+                onPressed: parent.color = "#2b2e37"
+                onReleased: parent.color = "#383c4a"
+
                           onClicked: pageLoader.source = "STorre.qml"
                       }
         }
@@ -183,6 +204,8 @@ ApplicationWindow {
             MouseArea {
                           id: clickableFTorre
                           anchors.fill: parent
+                onPressed: parent.color = "#2b2e37"
+                onReleased: parent.color = "#383c4a"
                           onClicked: pageLoader.source = "FTorre.qml"
                       }
         }
@@ -196,6 +219,8 @@ ApplicationWindow {
             MouseArea {
                           id: clickableSTres
                           anchors.fill: parent
+                onPressed: parent.color = "#2b2e37"
+                onReleased: parent.color = "#383c4a"
                           onClicked: pageLoader.source = "Stres.qml"
                       }
         }
@@ -209,6 +234,8 @@ ApplicationWindow {
             MouseArea {
                           id: clickableFTres
                           anchors.fill: parent
+                onPressed: parent.color = "#2b2e37"
+                onReleased: parent.color = "#383c4a"
                           onClicked: pageLoader.source = "FTres.qml"
                       }
         }
@@ -222,6 +249,8 @@ ApplicationWindow {
             MouseArea {
                           id: clickableSQuatre
                           anchors.fill: parent
+                onPressed: parent.color = "#2b2e37"
+                onReleased: parent.color = "#383c4a"
                           onClicked: pageLoader.source = "SQuatre.qml"
                       }
         }
@@ -236,6 +265,8 @@ ApplicationWindow {
             MouseArea {
                           id: clickableFQuatre
                           anchors.fill: parent
+                onPressed: parent.color = "#2b2e37"
+                onReleased: parent.color = "#383c4a"
                           onClicked: pageLoader.source = "FQuatre.qml"
                       }
         }

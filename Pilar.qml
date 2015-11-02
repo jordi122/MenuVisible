@@ -13,5 +13,10 @@ Rectangle {
        onClicked: myItem.message("clicked!")
    }
 
+   Label {
+       anchors.centerIn: parent
+       text: "Centre"
+   }
+
 
 }
